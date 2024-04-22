@@ -1,0 +1,309 @@
+$Grayscale-White: #FFFFFF;
+$Grayscale-OffWhite: #F1F2F3;
+$Grayscale-InputBack: #F1F2F3;
+$Grayscale-Labels: #97999B;
+$Grayscale-Body: #626275;
+$Grayscale-Black: #000000;
+$Grayscale-Black50: rgba(0,0,0,0.5);
+
+$Primary-IntusBlue: #4D7EF8;
+$Primary-IntusBlue50: rgba(77,126,248, 0.5);
+$Primary-IntusNavy: #062D8F;
+
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $Grayscale-OffWhite;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+span {
+  margin: 10px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 28px;
+  font-family: 'Mulish', Arial, sans-serif;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Mulish', Arial, sans-serif;
+  margin-bottom: 0px;
+}
+
+hr {
+  margin-top: 0px;
+  width: 90%;
+  color: $Grayscale-Labels;
+}
+
+.nav-header {
+  height: 12%;
+  background-color: $Grayscale-White;
+  padding: 0px;
+  box-shadow: 0px 0.4px 0.4rem 0.06rem $Grayscale-Black50;
+
+  .navbar-brand {
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+}
+
+.participant-card {
+  box-shadow: 0px 0.4px 0.4rem 0.06rem $Grayscale-Black50;
+  border: none;
+  border-radius: 10px;
+  flex: 0 0 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &:hover {
+    box-shadow: 0px 0.4px 0.4rem 0.06rem $Grayscale-Black50;
+    border: 2px solid $Primary-IntusBlue50;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .participant-name {
+    color: $Grayscale-Body;
+    height: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  .participant-ICD10-code {
+    color: $Primary-IntusNavy;
+    margin-left: 0;
+  }
+
+}
+
+
+.participant-page {
+  height: 88%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .participants-block {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+    width: 80vw;
+    height: fit-content;
+    color: $Primary-IntusNavy;
+  }
+
+}
+
+.wrapper {
+  margin: 0px;
+  width: 30%;
+  text-align: left;
+}
+
+
+
+.participant-list {
+  box-shadow: 0px 0.4px 0.4rem 0.06rem $Grayscale-Black50;
+  border: none;
+  border-radius: 10px;
+  max-height: 70vh;
+  width: 70vw;
+  overflow-y: auto;
+  background-color: $Grayscale-White;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 10%;
+    width: 90%;
+    color: $Grayscale-Labels;
+
+    .header-participant-name {
+      margin: 0px;
+      margin-left: 2px;
+      margin-bottom: 2px;
+      margin-top: auto;
+    }
+    .wrapper {
+      margin-right: 2px;
+      margin-bottom: 2px;
+      margin-top: auto;
+
+      .header-ICD-Code {
+        margin: 0px;
+        margin-right: 2px;
+        margin-top: auto;
+  
+        .filter_image {
+          height: 9%;
+          width: 9%;
+  
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+    
+  } 
+
+  .body {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.diagnosis-page {
+  display:flex;
+  margin-top: 5vh;
+
+  .padding-div {
+    width: 30vw;
+    text-align: left;
+
+    .back-button {
+      background-color: $Primary-IntusBlue;
+      color: $Grayscale-White;
+      margin-right: auto;
+      margin-left: 20%;
+      height: 10%;
+      width: 30%;
+    }
+
+  }
+
+
+
+}
+
+.diagnosis-list {
+  box-shadow: 0px 0.4px 0.4rem 0.06rem $Grayscale-Black50;
+  border: none;
+  border-radius: 10px;
+  max-height: 75vh;
+  width: 60vw;
+  overflow-y: auto;
+  background-color: $Grayscale-White;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .header {
+    width: 90%;
+    text-align: left;
+    padding-top: 5%;
+    margin-bottom: 5%;
+    height: 40%;
+
+    hr {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .participant-name-span {
+      margin: 0px;
+      color: $Grayscale-Body;
+    }
+
+    .icd-codes-span {
+      margin: 0px;
+      color: $Grayscale-Labels;
+    }
+
+  }
+
+  .body {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+}
+
+.diagnosis-card {
+  border: none;
+  border-radius: 0;
+  flex: 0 0 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: $Grayscale-InputBack;
+
+  .diagnosis-name {
+    color: $Grayscale-Black;
+    text-align: left;
+  }
+
+  .diagnosis-ICD10-code {
+    color: $Grayscale-Body;
+  }
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
