@@ -3,12 +3,14 @@ const cors = require("cors");
 const { participants } = require("./data");
 
 var corsOptions = {
-  origin: 'http://localhost:3000/'
+  origin: 'http://localhost:3000'
 };
 
 const app = express();
 
-app.get("/participants", cors(), (_, res) => {
+app.use(cors(corsOptions));
+
+app.get("/participants", (_, res) => {
   res.json(participants);
 });
 
